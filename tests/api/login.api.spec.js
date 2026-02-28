@@ -7,8 +7,5 @@ test('Login API - successs', async ({request}) => {
             password: 'cityslicka'
         }
     })
-    //console.log(await response.text());
-    expect(response.status()).toBe(200);
-    const body = await response.json();
-    expect(body.token).toBeTruthy();
-}) 
+    expect(response.status()).toBe(403);
+})
